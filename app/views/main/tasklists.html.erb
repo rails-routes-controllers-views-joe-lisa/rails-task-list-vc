@@ -1,0 +1,10 @@
+<h1>These are your tasklists</h1>
+<ul>
+    <% @list.each do |eachlist| %>
+    <li>
+        Title: <%= eachlist.title%><br>
+        Description: <%= eachlist.description %><br>
+        Link: <a href = './list_tasks'>Click Here!</a>
+        <% end %>
+    </li>
+</ul>
