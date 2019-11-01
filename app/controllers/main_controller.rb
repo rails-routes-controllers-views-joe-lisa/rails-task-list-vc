@@ -1,13 +1,10 @@
 class MainController < ApplicationController
     def displaylist
         @list = TaskList.all
-        
         render 'tasklists.html.erb'
     end
     def displaytasks
-        tasklistid = TaskList.id
-        list = TaskList.find(tasklistid) 
-        @tasks = list.tasks.all
+        @list = TaskList.find params[:id]
         render 'list_tasks.html.erb'
     end
     # def displaytasklist2
